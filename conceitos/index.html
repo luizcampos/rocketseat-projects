@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!--codificação de caracteres especiais-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--para aceitação em dispositivos móveis-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fellipe Campos">
+    <meta name="description" content="Conheça tudo o que deseja...">
+    <meta name="robots" content="nofollow">
+
+    <meta property="og:image" content="https://cdn-images-1.medium.com/max/92/1*TkXVfLTwsHdwpUEjGzdi9w@2x.jpeg">
+    <meta property="og:description" content="Aqui vem um texto para ser mostrado ao compartilhar no facebook">
+    <meta property="og:title" content="Um site da Rocketseat">
+
+    <!-- twitter -->
+    <meta name="twitter:title" content="Rocketseat">
     <title>Home</title>
 </head>
 <body>
@@ -16,5 +27,48 @@
     </nav>
     <h1>Sobre mim</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam quia at necessitatibus totam corrupti. Cum dolores quibusdam nesciunt error iusto voluptatum perferendis? Possimus eligendi illum voluptatem accusantium eveniet itaque pariatur?</p>
+
+    <h2>Tabeça complexa</h2>
+    <table>
+        <caption>Produzidos x Vendidos por loja</caption>
+
+        <colgroup> <!--agrupamento de colunas-->
+            <col>
+            <col span="2" style="background-color: red">;
+            <col span="2" style="background-color:blue">;
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th rowspan="2"></th> <!--vai ocupar duas linhas-->
+                <th colspan="2" scope="colgroup">Afonso Pena</th>
+                <th colspan="2" scope="colgroup">Antônia Pereira</th>
+            </tr>
+            <tr>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">Vassouras</th>
+                <td>50</td>
+                <td>30</td>
+                <td>20</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Baldes</th>
+                <td>10</td>
+                <td>10</td>
+                <td>30</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
