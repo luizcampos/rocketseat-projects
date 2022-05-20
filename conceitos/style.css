@@ -1,5 +1,62 @@
-/*body{
-    background-image: url(files/2.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-}*/
+body{
+    margin: 0;
+}
+
+.page{
+    display: grid;
+    grid-template-areas: "topoPage topoPage topoPage"
+                         "about about ads"
+                         "product1 product2 product3"
+                         "rodape rodape rodape";
+    grid-template-columns: 2fr 1fr 2fr; /*width da coluna*/
+    grid-template-rows: 2fr 30fr 25fr 6fr; /*height da linha*/
+}
+
+.topoPage{
+    background-color: aqua;
+    color: black;
+    grid-area: topoPage;
+    padding: 5px;
+}
+
+.about{
+    background-color: #990002;
+    grid-area: about;
+    padding: 5px;
+}
+
+.ads{
+    background-color: #108002;
+    grid-area: ads;
+    padding: 5px;
+}
+
+.products{
+    background-color: #999910;
+    display: inline;
+    padding: 5px;
+}
+
+#product1{
+    background-color: #993399;
+    grid-area: product1;
+    padding: 5px;
+}
+
+#product2{
+    background-color: #440290;
+    grid-area: product2;
+    padding: 5px;
+}
+
+#product3{
+    background-color: #505099;
+    grid-area: product3;
+    padding: 5px;
+}
+
+.rodape{
+    background-color: #302099;
+    grid-area: rodape;
+    padding: 5px;
+}
