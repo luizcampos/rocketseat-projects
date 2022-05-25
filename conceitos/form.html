@@ -7,8 +7,33 @@
     <title>Forms HTML</title>
 </head>
 <body>
-    <form>
-        
+    <form id="formContact" action="">
+        <fieldset>
+            <legend>Contato</legend>
+            <label>Nome: 
+                <br>
+                <input type="txtName" placeholder="Digite seu nome" autofocus required title="Ops! Você não digitou seu nome.">
+            </label>
+            <br><br>
+            <label>E-mail: 
+                <br>
+                <input type="email" placeholder="Digite seu e-mail" pattern=".+@*\.com" title="Ops! Você não digitou seu e-mail.">
+            </label>
+            <br><br>
+            <label>Cor: 
+                <br>
+                <input type="color">
+            </label>
+            <br><br>
+            <label>Mensagem: 
+                <br>
+                <textarea type="textareaMessage" placeholder="Gostaria de saber..." rows="20" cols="30" required title="Digite a sua mensagem"></textarea>
+            </label>
+            <br><br>
+            <button form="formContact">
+                Enviar
+            </button>
+        </fieldset>
     </form>
 </body>
 </html>
