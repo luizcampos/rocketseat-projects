@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        var weight;
+
+        console.log(typeof weight);
+
+        var name, age, stars, isSubscribed;
+        name = "Luiz";
+        age = 23;
+        star = 4.9;
+        isSubscribed = true;
+
+        let student = {
+            name: "Maria",
+            age: 25,
+            weight: 68.7,
+            isSubscribed: true
+        }
+
+        console.log(`${student.name} de idade ${student.age} pesa ${student.weight} Kg.`);
+
+        let students = [];
+
+        students = [student];
+
+        console.log(students[0]);
+
+        //New student
+        const mike = {
+            name: "Mike",
+            age: 30,
+            weight: 70.5,
+            isSubscribed: false
+        }
+
+        students[1] = mike;
+    </script>
+</body>
+</html>
