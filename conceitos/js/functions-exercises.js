@@ -54,3 +54,25 @@ function calculator(schedule){
 calculator(schedule);
 
 //Exercice 3
+
+let degrees = "50C", totalF = 0, totalC = 0;
+
+function transform(degrees){
+    const verification1 = degrees.toUpperCase().includes("C");
+    const verification2 = degrees.toUpperCase().includes("F");
+
+    if(verification1 || verification2){
+        if(verification1){
+            totalF = (Number(degrees.toUpperCase().replace("C","")) * (9/5)) + 32;
+            console.log(`Total em Fahrenheit: ${totalF}F`);
+        } else if (verification2){
+            totalC = (Number(degrees.toUpperCase().replace("F",""))-32) * (5/9);
+            console.log(`Total em Celsius: ${totalC}C`);
+        }
+    } else{
+        throw new Error(`Você digitou uma medida errada! Tente novamente.`);
+    }
+    
+}
+
+transform(degrees);
