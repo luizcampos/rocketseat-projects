@@ -76,3 +76,58 @@ function transform(degrees){
 }
 
 transform(degrees);
+
+
+//Exercise 4
+
+//Array de objetos
+const booksByCategory = [
+    { //objeto
+        category: "Riqueza",
+        books: [ //array de objetos
+            {
+                title: "Os segredos da mente milionária",
+                author: "T. Harv Eker",
+            },
+            {
+                title: "O homem mais rico da Babilônia",
+                author: "George S. Clason",
+            },
+            {
+                title: "Pai rico, pai pobre",
+                author: "Robert T. Kiyosaki e Sharon L. Lechter",
+            },
+        ],
+    },
+
+    { 
+        category: "Romance",
+        books: [
+            {
+                title: "Harry Potter e o Enigma do Príncipe",
+                author: "J.K Rowling",
+            },
+            {
+                title: "Harry Potter e a Ordem da Fênix",
+                author: "J.K Rowling",
+            },
+            {
+                title: "Harry Potter e as Relíquias da Morte",
+                author: "J.K Rowling",
+            },
+            {
+                title: "Percy Jackson e o Ladrão de Raios",
+                author: "Rick Riordan",
+            },
+        ],
+    },
+];
+
+console.log("===== Books =====");
+console.log(`Total of categories: ${booksByCategory.length}`);
+
+
+//Número de livros em cada categoria
+for(let x of booksByCategory){
+    console.log(`Total os books in the category ${x.category}: ${x.books.length}`);
+}
