@@ -123,7 +123,7 @@ const booksByCategory = [
     },
 ];
 
-console.log("===== Books =====");
+console.log("\n===== Books =====");
 console.log(`Total of categories: ${booksByCategory.length}`);
 
 
@@ -131,3 +131,47 @@ console.log(`Total of categories: ${booksByCategory.length}`);
 for(let x of booksByCategory){
     console.log(`Total os books in the category ${x.category}: ${x.books.length}`);
 }
+
+//Alimentar um array c/ todos os autores (repetidos tbm)
+
+let authors =[];
+
+function countAuthors(){
+    for(let x of booksByCategory){ // roda o objeto
+        for(let z = 0; z < x.books.length; z++){ 
+            if(authors.indexOf(x.books[z].author) == -1){
+                authors.push(x.books[z].author);
+            }
+        }
+    }
+    
+    /*
+    //Eliminar autores repetidos
+    let z2 = 1;
+    for(let z = 0; z < authors.length; z++){
+        if(authors[z]===authors[z2]){
+            authors.splice(z,1);
+        }else{
+            z2++;
+        }
+    }*/
+    return authors.length;
+}
+
+console.log(`Total of authors: ${countAuthors()}`);
+
+
+//Mostrar livros de um autor específico
+function byAuthor(name){
+    console.log(`\n=== Books of ${String(name)} ===`);
+    for(let x of booksByCategory){ // roda o objeto
+        for(let z = 0; z < x.books.length; z++){ 
+            if(x.books[z].author === name){
+                console.log(`${x.books[z].title}`);
+            }
+        }
+    }
+ 
+}
+
+byAuthor("J.K Rowling");
