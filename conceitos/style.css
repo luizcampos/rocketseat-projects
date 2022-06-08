@@ -60,3 +60,28 @@ body{
     grid-area: rodape;
     padding: 5px;
 }
+
+/* CSS (pseudo-elements e pseudo-class) */
+
+ul li:first-child{
+    color: red;
+}
+
+ul li:nth-of-type(3){
+    color: blue;
+}
+
+ul li:nth-of-type(2):hover{
+    background-color: blue;
+    font-size: 2em;
+    color: white;
+}
+
+input:hover{
+    border-color: red;
+}
+
+h3::after{
+    content: " >>>>>";
+    border-color: red;
+}
