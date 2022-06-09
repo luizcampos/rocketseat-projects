@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color:chocolate;
+    padding: 5px;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 3;
+    background-color: aquamarine;
+}
+
+header p {
+    background-color:brown;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    background-color:blueviolet;
+    justify-content:flex-end;
+}
+
+ul li{
+    flex-basis: 1000px;
+}
