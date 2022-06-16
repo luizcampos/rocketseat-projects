@@ -85,3 +85,11 @@ h3::after{
     content: " >>>>>";
     border-color: red;
 }
+
+/* ==== */
+
+
+.white{
+    color: white;
+    background-color: blue;
+}

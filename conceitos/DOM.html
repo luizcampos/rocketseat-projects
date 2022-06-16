@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1></h1>
+    <div></div>
+
+    <script>
+        //Manipulando conteúdo
+        //textContent
+
+        const element = document.querySelector('h1');
+
+        element.textContent = "Hello, world!";
+        console.log("Retorno textContent: " + element.textContent);
+
+        //innerText
+        element.innerText += "Oi";
+        console.log("Retorno innerText: " + element.innerText);
+
+        //innerHTML
+        element.innerHTML += " <span style='color: red';> !! </span>";
+        console.log("Retorno innerHTML: " + element.innerHTML);
+
+        //Manipular atributos HTML
+        const divElement = document.querySelector('div');
+
+        divElement.setAttribute("id", "div1");
+
+        console.log(divElement);
+
+        divElement.setAttribute("class", "product3 bg");
+        
+        console.log(divElement);
+
+        //CSS
+
+        const body = document.querySelector("body");
+
+        body.style.backgroundColor = "red";
+
+        element.classList.add('white');
+
+        //Criando elemento
+        const div2 = document.createElement('div');
+
+        div2.textContent = "Eu sou uma div adicionada ao HTML pelo DOM!";
+        
+        body.append(div2);
+    </script>
+</body>
+</html>
