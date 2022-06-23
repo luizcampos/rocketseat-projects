@@ -1,8 +1,9 @@
-import { CheckCircle, Lock } from 'phosphor-react'
+import { CheckCircle, Lock } from 'phosphor-react' //biblioteca de imagens
 import { isPast, format } from 'date-fns' //"isPast" verifica se uma data já passou comparado ao dia atual
-import ptBR from 'date-fns/locale/pt-BR'
+import ptBR from 'date-fns/locale/pt-BR' //data traduzida para pt-BR
+import { Link } from 'react-router-dom';
 
-interface LessonProps{
+interface LessonProps{ //GraphQL
     title: string;
     slug: string;
     availableAt: Date;
@@ -10,32 +11,32 @@ interface LessonProps{
 }
 
 
-export function LessonBlock(props: LessonProps){
+export function LessonBlock(props: LessonProps){ //recebe as propriedades do GraphCMS
 
-    const isLessonAvailable = isPast(props.availableAt);
+    const isLessonAvailable = isPast(props.availableAt); //verifica se uma data já passou comparado ao dia atual (true ou false)
     const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", {
         locale: ptBR,
     })
 
     return (
-        <a href="#">
+        <Link to={`/event/lesson/${props.slug}`} className='group'>
             <span className="text-gray-300">
             {availableDateFormatted}
             </span>
 
-            <div className="rouded border border-gray-500 p-4 mt-2">
+            <div className="rouded border border-gray-500 p-4 mt-2 group-hover:border-green-500">
                 <header className="flex items-center justify-between">
                     
                     {isLessonAvailable ? (
-                        <span className="text-sm text-blue-500 font-medium flex items-center gap-2">
-                        <CheckCircle size={20}/>
-                        Conteúdo liberado
-                    </span>
+                        <span className="text-sm text-blue-500 font-medium flex items-center gap-2 ">
+                            <CheckCircle size={20}/>
+                            Conteúdo liberado
+                        </span>
                     ) : (
                         <span className="text-sm text-orange-500 font-medium flex items-center gap-2">
-                        <Lock size={20}/>
-                        Em breve
-                    </span>
+                            <Lock size={20}/>
+                            Em breve
+                        </span>
                     )}
 
                     <span className="text-xs rounded px-2 py-[0.125rem] text-white border border-green-300 font-bold">
@@ -46,6 +47,6 @@ export function LessonBlock(props: LessonProps){
                     {props.title}
                 </strong>
             </div>
-        </a>
+        </Link>
     )
 }
