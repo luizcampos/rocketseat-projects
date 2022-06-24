@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: { //importar imagem no Tailwind
+        blur: 'url(/src/assets/blur.png)'
+      },
 
       fontFamily: {
         sans: 'Roboto, sans-serif',
