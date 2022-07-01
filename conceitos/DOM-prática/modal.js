@@ -7,12 +7,9 @@ btnAbrirJanela.addEventListener('click', function(){
 });
 
 
-document.onkeydown = fecharDiv;
-
-function fecharDiv(event){
+document.addEventListener('keydown', function(event){
     let keyPress = event.key;
-    //console.log(typeof keyPress)
     if(keyPress === "Escape"){
         divHidden.style.visibility = "hidden";
     }
-}
+})
