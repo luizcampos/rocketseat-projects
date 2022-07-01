@@ -10,8 +10,9 @@
 </head>
 <body>
 
-    <h1></h1>
+    <h1>Sou h1</h1>
     <div></div>
+    <input></input>
 
     <script>
         //Manipulando conteúdo
@@ -55,6 +56,26 @@
         div2.textContent = "Eu sou uma div adicionada ao HTML pelo DOM!";
         
         body.append(div2);
+
+        //Event
+
+        const h1 = document.querySelector('h1');
+        h1.addEventListener('mouseover', msg);
+
+        function msg (){
+            console.log('Você passou o cursor em cima do <h1>');
+        }
+
+        //Object event (Events)
+
+        const input = document.querySelector('input');
+        input.addEventListener('onkeypress', getKey);
+
+        function getKey(event){
+            console.log(event.key);
+        }
+
+
     </script>
 </body>
 </html>
