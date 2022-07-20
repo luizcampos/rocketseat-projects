@@ -33,6 +33,48 @@ function generate(){
             "#0591d1",
             "#0380be",
             "#006eab"
+        ],
+        [
+            "#ffe181",
+            "#eee9e5",
+            "#fad3b2",
+            "#ffba7f",
+            "#ff9c97"
+        ],
+        [
+            "#655643",
+            "#80bca3",
+            "#f6f7bd",
+            "#e6ac27",
+            "#bf4d28"
+        ],
+        [
+            "#fc354c",
+            "#29221f",
+            "#13747d",
+            "#0abfbc",
+            "#fcf7c5"
+        ],
+        [
+            "#ffaf90",
+            "#ffd37a",
+            "#002f7c",
+            "#006583",
+            "#00a492"
+        ],
+        [
+            "#ea4c73",
+            "#ef8465",
+            "#f1c47b",
+            "#f8efad",
+            "#f8efd7"
+        ],
+        [
+            "#592E0B",
+            "#DF985E",
+            "#D9701A",
+            "#593D25",
+            "#A65614"
         ]
     ]
     const color = Math.floor(Math.random() * palettes.length);
