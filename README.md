@@ -1,2 +1,10 @@
 # rocketseat-projects
-My activities and projects of Rockseat's course
+
+Projetos de estudo utilizando:
+- HTML;
+- CSS;
+- JavaScript;
+- React;
+- Node;
+- Bibliotecas como FontAwesome;
+- Frameworks como Tailwind.
